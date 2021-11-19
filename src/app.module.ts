@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { ConfigModule } from 'msa-util';
+import { MsaConfigModule } from 'msa-util';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    MsaConfigModule.register({
+      folder: 'env',
+      env: 'local',
+      isGlobal: true,
+    }),
+  ],
 })
 export class AppModule {}
