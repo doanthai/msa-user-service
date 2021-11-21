@@ -649,6 +649,15 @@
     tslib "2.3.1"
     uuid "8.3.2"
 
+"@nestjs/microservices@^8.2.2":
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-8.2.2.tgz#13122c27d67388f49eb7c8a59984d6160d196fc1"
+  integrity sha512-JOwFSpFwtGqgP3wv5RRKbH6tEzejRasaB3HJOHZwNULI33We+SkQNfUJvl7oj2F9t+ji3V6cfmSVk6aQMyQCKg==
+  dependencies:
+    iterare "1.2.1"
+    json-socket "0.3.0"
+    tslib "2.3.1"
+
 "@nestjs/mongoose@^9.0.1":
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/@nestjs/mongoose/-/mongoose-9.0.1.tgz#a07f5440318d277579ed8ab2b4dec7eb5cc13e4e"
@@ -3426,6 +3435,11 @@ json-schema-traverse@^1.0.0:
   resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz#ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2"
   integrity sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
 
+json-socket@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/json-socket/-/json-socket-0.3.0.tgz#f4b953c685bb8e8bd0b72438f5208d9a0799ae07"
+  integrity sha512-jc8ZbUnYIWdxERFWQKVgwSLkGSe+kyzvmYxwNaRgx/c8NNyuHes4UHnPM3LUrAFXUx1BhNJ94n1h/KCRlbvV0g==
+
 json-stable-stringify-without-jsonify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
@@ -3739,7 +3753,7 @@ ms@2.1.2:
 
 "msa-util@git+https://gitlab-node-msa:glpat-t-Y-NtiV8m8r-m6zweFo@gitlab.com/microservice-nestjs/msa-utils.git#dev":
   version "0.0.1"
-  resolved "git+https://gitlab-node-msa:glpat-t-Y-NtiV8m8r-m6zweFo@gitlab.com/microservice-nestjs/msa-utils.git#1f5e40787ffd1ee024ef2ae9f02b23f67308bceb"
+  resolved "git+https://gitlab-node-msa:glpat-t-Y-NtiV8m8r-m6zweFo@gitlab.com/microservice-nestjs/msa-utils.git#271cad363f62d5886f611653486946d2af94174e"
   dependencies:
     "@nestjs/common" "^8.0.0"
     "@nestjs/config" "^1.1.0"

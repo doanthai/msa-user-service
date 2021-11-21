@@ -1,5 +1,5 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { getModelToken } from '@nestjs/mongoose';
+import { Test, TestingModule } from '@nestjs/testing';
 import { Model } from 'mongoose';
 import { UserCore } from './schemas/user-core.schema';
 import { UserCoreService } from './user-core.service';
@@ -66,8 +66,7 @@ describe('UserCoreService', () => {
     expect(userCores).toEqual(userCoresArray);
   });
 
-  it(
-    'should insert a new user core', async () => {
+  it('should insert a new user core', async () => {
     jest
       .spyOn(model, 'create')
       .mockImplementationOnce(() => Promise.resolve(mockUserCoreCreated));

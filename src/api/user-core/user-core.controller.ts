@@ -8,7 +8,9 @@ export class UserCoreController {
   constructor(private readonly userCoreService: UserCoreService) {}
 
   @Post()
-  async register(@Body() createUserCoreDto: CreateUserCoreDto): Promise<UserCore> {
+  async register(
+    @Body() createUserCoreDto: CreateUserCoreDto,
+  ): Promise<UserCore> {
     return await this.userCoreService.create(createUserCoreDto);
   }
 
@@ -16,5 +18,4 @@ export class UserCoreController {
   async findAll(): Promise<UserCore[]> {
     return this.userCoreService.findAll();
   }
-
 }
