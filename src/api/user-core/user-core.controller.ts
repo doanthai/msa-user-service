@@ -3,7 +3,7 @@ import { CreateUserCoreDto } from './dto/create-user-core.dto';
 import { UserCore } from './schemas/user-core.schema';
 import { UserCoreService } from './user-core.service';
 
-@Controller()
+@Controller('user-core')
 export class UserCoreController {
   constructor(private readonly userCoreService: UserCoreService) {}
 

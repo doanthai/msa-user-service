@@ -8,8 +8,9 @@ import {
   MsaLoggerModule,
 } from 'msa-util';
 import { UserCoreModule } from './api';
+import { HealthModule } from './api/health';
 
-const customModules = [UserCoreModule];
+const customModules = [UserCoreModule, HealthModule];
 
 const configOptions = {
   folder: 'env',
