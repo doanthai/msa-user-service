@@ -26,8 +26,8 @@ async function bootstrap() {
   //     port: 8000,
   //   },
   // });
+  // await app.startAllMicroservices();
 
-  await app.startAllMicroservices();
   await app.register(compression, { encodings: ['gzip', 'deflate'] });
 
   if (configService.get<string>('ENV') === 'local') {

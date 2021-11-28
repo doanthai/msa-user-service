@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, CacheKey, Controller, Get, Post } from '@nestjs/common';
 import { CreateUserCoreDto } from './dto/create-user-core.dto';
 import { UserCore } from './schemas/user-core.schema';
 import { UserCoreService } from './user-core.service';
@@ -15,6 +15,7 @@ export class UserCoreController {
   }
 
   @Get()
+  @CacheKey('user_cores')
   async findAll(): Promise<UserCore[]> {
     return this.userCoreService.findAll();
   }

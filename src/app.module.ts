@@ -1,7 +1,9 @@
-import { Module } from '@nestjs/common';
+import { CacheInterceptor, CacheModule, Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { APP_INTERCEPTOR } from '@nestjs/core';
 import { MongooseModule } from '@nestjs/mongoose';
 import {
+  cachingFactory,
   mongoFactory,
   MsaConfigModule,
   MsaLogger,
@@ -25,8 +27,20 @@ const configOptions = {
       useFactory: mongoFactory,
       inject: [ConfigService, MsaLogger],
     }),
+    CacheModule.registerAsync({
+      imports: [MsaConfigModule],
+      useFactory: cachingFactory,
+      inject: [ConfigService],
+      isGlobal: true,
+    }),
     MsaLoggerModule,
     ...customModules,
+  ],
+  providers: [
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: CacheInterceptor,
+    },
   ],
 })
 export class AppModule {}
